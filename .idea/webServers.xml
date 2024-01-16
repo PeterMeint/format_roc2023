@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e7be4c2f-6461-4590-81a1-2bf740984dc6" name="Template omgeving (project level)" url="http://93.186.176.76">
+        <fileTransfer rootFolder="/template.springinstituut.nl/htdocs" accessType="FTPS" host="93.186.176.76" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
