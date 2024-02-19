@@ -362,7 +362,7 @@ class format_roc2023_renderer extends format_topics_renderer
             $htmlsection[$section] .= $this->section_header($thissection, $course, false, 0);
             if ($thissection->uservisible) {
                 $htmlsection[$section] .= $this->course_section_cm_list_roc2023($course, $thissection, 0);
-//PMH*/         $htmlsection[$section] .= $this->courserenderer->course_section_cm_list($course, $thissection, 0);
+///*PMH*/         $htmlsection[$section] .= $this->courserenderer->course_section_cm_list($course, $thissection, 0);
                 $htmlsection[$section] .= $this->courserenderer->course_section_add_cm_control($course, $section, 0);
             }
             $htmlsection[$section] .= $this->section_footer();
@@ -620,7 +620,7 @@ class format_roc2023_renderer extends format_topics_renderer
             $data->cmname['icon'] = $url;
         }
 
-        return $this->output->render_from_template('format_roc2023/activity', $data);
+        return $this->output->render_from_template('format_roc2023/cm', $data);
     }
 
     function check_quiz_waitingforgrade ($quizid, $userid) {

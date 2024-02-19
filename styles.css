@@ -153,3 +153,6 @@
     display: block;
     border-bottom: 1px dotted #dee2e6 !important;
 }
+.activity-item {
+    border: none !important;
+}

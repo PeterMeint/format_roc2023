@@ -14,10 +14,11 @@ This plugin shows a list related students / the practical scan of the selected s
 | **Name** | *roc2023*                                                          | |
 | |                                                                    | |
 
-| Version | Releasedate | Short description         |
-|---------|-------------|---------------------------|
-| 1.1     | 2024011601  | Added picto for classical |
-| 1.0     | ?           | Initiële versie           |
+| Version | Releasedate | Short description          |
+|---------|-------------|----------------------------|
+| 2.01    | 2024021901  | Adapted code to Moodle 4.3 |
+| 1.1     | 2024011601  | Added picto for classical  |
+| 1.0     | ?           | Initiële versie            |
 
 :wrench: Settings
 ---
@@ -25,9 +26,16 @@ no settings
 
 :bookmark_tabs: Releasenotes
 ---
-| ReleaseNr  | File                | Function/Linenr              | Short description                            | 
-| ---------- |---------------------|------------------------------|----------------------------------------------|
-| 2024011601 | /pix/klassikaal.png | -                            | Added picto                                  |
+| ReleaseNr  | File                              | Function/Linenr             | Short description                     | 
+|------------|-----------------------------------|-----------------------------|---------------------------------------|
+| 2024021901 | /templates/activity_info.mustache | *                           | Adapted code to new lay-out           |
+|            | /templates/activity.mustache      | *                           | "                         "           |
+|            | /templates/cmname.mustache        | *                           | "                         "           |
+|            | /templates/cm.mustache            | *                           | "                         "           |
+|            | /templates/completion.mustache    | *                           | "                         "           |
+|            | styles.css                        | 'activity-item'             | Added a bit of styling for this class | 
+|            | /renderer.php                     | course_section_cm_roc2023   | Call to new lay-out files             |
+| 2024011601 | /pix/klassikaal.png               | -                           | Added picto                           |
 
 :floppy_disk: Install
 ---

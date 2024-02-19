@@ -44,21 +44,37 @@
     }
 }}
 {{#url}}
-    <div class="activity-instance d-flex flex-column">
+    {{#uservisible}}
+        <a href="{{url}}"
+            class="activity-icon activityiconcontainer {{purpose}} courseicon align-self-start mr-2"
+            {{#showtooltip}}data-toggle="tooltip" title="{{{pluginname}}}" data-placement="top"{{/showtooltip}}
+        >
+            <img src="{{{icon}}}" class="activityicon {{iconclass}}"
+                 alt="{{#cleanstr}} activityicon, moodle, {{{pluginname}}} {{/cleanstr}}"
+            >
+        </a>
+    {{/uservisible}}
+    {{^uservisible}}
+        <div class="activity-icon activityiconcontainer {{purpose}} courseicon align-self-start mr-2">
+            <img src="{{{icon}}}" class="activityicon {{iconclass}}"
+                 alt="{{#cleanstr}} activityicon, moodle, {{{pluginname}}} {{/cleanstr}}"
+            >
+        </div>
+    {{/uservisible}}
+    <div class="activity-name-area activity-instance d-flex flex-column mr-2">
         <div class="activitytitle media {{textclasses}} modtype_{{modname}} position-relative align-self-start">
-            <div class="activityiconcontainer {{purpose}} courseicon align-self-start mr-3">
-                <img src="{{{icon}}}" class="activityicon " alt="{{{modname}}} icon">
-            </div>
             <div class="media-body align-self-center">
-                <div class="text-uppercase small">
-                    {{{pluginname}}}
-                </div>
                 <div class="activityname">
                     {{#activityname}}
                         {{$ core/inplace_editable }}
                             {{> core/inplace_editable }}
                         {{/ core/inplace_editable }}
                     {{/activityname}}
+                    {{#activitybadge}}
+                        {{$ core_courseformat/local/content/cm/activitybadge }}
+                            {{> core_courseformat/local/content/cm/activitybadge }}
+                        {{/ core_courseformat/local/content/cm/activitybadge }}
+                    {{/activitybadge}}
                 </div>
             </div>
         </div>
