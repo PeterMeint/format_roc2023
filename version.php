@@ -25,8 +25,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->requires = 2015111600; /* moodle 3.0 */
 $plugin->component = 'format_roc2023';
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = '3.1';
-$plugin->version = 2024011601;
+$plugin->release   = '2.01';        // Plugin for LLIP.
+$plugin->version   = 2024021901;    // The current module version (Date: YYYYMMDDXX)
+$plugin->requires  = 2023100902;    // Requires this Moodle version
